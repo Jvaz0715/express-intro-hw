@@ -1,0 +1,20 @@
+{
+  "name": "express-intro-hw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jvaz0715/express-intro-hw.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jvaz0715/express-intro-hw/issues"
+  },
+  "homepage": "https://github.com/Jvaz0715/express-intro-hw#readme"
+}
