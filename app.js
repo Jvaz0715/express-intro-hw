@@ -1,4 +1,5 @@
 const express = require("express");
+const { request } = require("http");
 //#6 above brings in express
 
 const logger = require("morgan");
@@ -36,6 +37,13 @@ a. In photos.ejs should contain html:5 boilerplate, and all 3 photos from images
 app.get('/photo-fun', function (req, res) {
     res.render("photos");
 })
+
+/* #18 Create a GET request with path "/:pet/:age" that renders pets.ejs
+a. In pets.ejs should show the pet's name and age (which is grabbed from the params... should be passed through from the GET request). Should attach method.js to log hello world in your browser. */
+app.get('/:pet/:age', function (req, res) {
+    res.render("pets", { name: req.params.pet, age: req.params.age,});
+})
+
 
 
 //make sure to add a listen method so server runs
