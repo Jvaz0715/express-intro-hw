@@ -30,6 +30,13 @@ app.get('/', function (req, res) {
     });
 })
 
+/* #17 Create a GET request with path "/photo-fun" that renders photos.ejs
+a. In photos.ejs should contain html:5 boilerplate, and all 3 photos from images folder
+*/ 
+app.get('/photo-fun', function (req, res) {
+    res.render("photos");
+})
+
 
 //make sure to add a listen method so server runs
 // add a console.log that dictates where server is running
