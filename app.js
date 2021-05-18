@@ -21,3 +21,19 @@ app.set("view engine", "ejs");
 
 // #10 after creating a 'public' folder, connect it here
 app.use(express.static(path.join(__dirname, "public")))
+
+/* #16 Create a GET request with path “/“ that renders index.ejs with user info (a name) and 3 fun light infos of yourself(array of info).
+a. In index.ejs should contain the html:5 boilerplate, a h1 that says `Welcome to my App ${user.name}`, and the list of fun light info of yourself. ex: "My favorite cuisines contain only carbs!!!". Also the h1 should be colored as your favorite color, this style should be imported in from stylesheets.*/
+
+app.get('/', function (req, res) {
+    res.render("index", {user: "James", infos: [{info: "My favorite cuisine is italian"}, {info: "I love sports"}, {info: "I have been coding for about 7 months"}],
+    });
+})
+
+
+//make sure to add a listen method so server runs
+// add a console.log that dictates where server is running
+
+app.listen(3000, function() {
+    console.log(`Server is running on PORT: ${3000}`);
+});

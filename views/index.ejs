@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Adds the stylesheet insdie of public folder -->
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+
+    <% if (user) { %>
+        <div>
+            <h1>Welcome to my App <%- user -%></h1>
+        </div>
+        <% } else { %>
+        <div>Please Login</div>
+        <% } %>   
+
+    <hr />
+
+    <ul>
+        <% infos.forEach(function(item) { %>
+            <li>
+                <%- item.info -%>
+            </li>
+            <% }); %>
+    </ul>
+    
+</body>
+<!-- Adds the method.js from public/javascript folder -->
+<script src="/javascripts/method.js"></script>
+</html>
