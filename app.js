@@ -1,5 +1,4 @@
 const express = require("express");
-const { request } = require("http");
 //#6 above brings in express
 
 const logger = require("morgan");
